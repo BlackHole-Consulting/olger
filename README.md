@@ -20,7 +20,9 @@ Shodan api - Cooming soon
 Execute command:
 
 cd olger
+
 chmod +x install
+
 ./install
 
 
