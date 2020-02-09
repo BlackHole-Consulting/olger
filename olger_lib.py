@@ -35,7 +35,7 @@ def elkpush(indexdat,jsondat):
                 ['host.domain'],
                 scheme="https",
                 verify_certs=False,
-                http_auth=('elastic', ''),
+                http_auth=('elastic', 'auth-key'),
 		port=9200
 	)
 	print(es.index(index=indexdat,doc_type="security_report", body=json.dumps(jsondat)))
@@ -50,7 +50,11 @@ address=""
 timestamp=""
 cpe=""
 cvecount=0
+inventory_by_product={}
 
+def filter(ini_string):
+    result = re.sub('[\W_]+', '', ini_string) 
+    return result.strip(',.').lower()
 
 def olger_parser():
     f = open(sys.argv[1])
@@ -72,7 +76,7 @@ def olger_parser():
     for x in dat["systems"]:
         if "up" in x["status"]:
             
-            id=id+1
+            
             nodes.append({"id":str(id)+""+str(x["ip"]),"host":str(id)+""+str(x["ip"])})
             
             for e in x["services"]:
@@ -186,8 +190,20 @@ def olger_parser():
 
                         links.append({"source":str(id)+""+str(x["ip"]),"target":str(id)+""+str(e["name"]), "value":"portname"})
 
-
+                    print "product : "+filter(str(product))
                     if str(product) !="":
+                        print filter(str(product))
+
+                        print str(x["ip"])
+                        
+                        nb=filter(str(product))
+                        try:
+                            inventory_by_product[nb][id]=str(x["ip"])
+                        except:
+                            inventory_by_product[nb]={}
+                            inventory_by_product[nb][id]=str(x["ip"])
+                            pass
+
                         nodes.append({"id":str(id)+""+str(product),"host":str(product)})
                         links.append({"source":str(id)+""+str(x["ip"]),"target":str(id)+""+str(product), "value":"product"})
                     if str(version) !="":
@@ -208,11 +224,23 @@ def olger_parser():
                     #print(toelastic)
                     #send data to elastic
                     #print(elkpush("box_"+sys.argv[2],toelastic))
-
+                    id=id+1
             graph={"nodes": nodes,"links":links}
 
+ 
+    data_grouped=""
+    i=0
+    for a in inventory_by_product:
+        print "\n"+a+"\n"
+        data_grouped = data_grouped+"\n\n["+a+"]\n\n"
+        for b in inventory_by_product[a]:
+            print b
+            data_grouped=data_grouped+"\n"+inventory_by_product[a][b]+"\n"
+            i=i+1
 
-
+    f = open("inventory", "w")
+    f.write(str(data_grouped))
+    f.close()
     with open("web/graphs/data.json", 'w') as outfile:
         json.dump(graph, outfile)
 
