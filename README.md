@@ -15,6 +15,18 @@ Graphviz export, export pdf and .dot files
 Shodan api - Cooming soon
 
 
+
+## Why
+
+Because we are tired and do not want to work, we have created olger, for those who have to create infinite inventories in giant infrastructures and have controlled the safety of the machines, from launching a patch to installing and hardening servers or HAP balancers. Make pretty security scans and reports withour do nothing.
+
+
+## Please don't use for bad things
+
+The information collected with this tool can be ilegal in some countries, sometimes can expose big infrastructures to a dangerous consecuences if you publish something, take care on that, this tools sends non malicious packets around the network to check connectivity and other cibersecurity issues.
+
+
+
 ## Install the tools
 
 Execute command:
