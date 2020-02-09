@@ -6,6 +6,7 @@ if [ $# == 0 ]; then
     echo "* param2 example: home"
 fi
 #scan with nmap an save the results
+mkdir ./data
 nmap -sV -A $1 -oX data/nmap$2.xml
 
 #convert the results to json
