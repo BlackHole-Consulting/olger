@@ -2,6 +2,9 @@
 
 Olger make a network scan parse the data ans send to elastic search, make a scan report in txt, open python webserver in localhost for visualization in D3.
 Uses cvdetails.com to identiy Cyber Security Vulnerabilities
+Sends data to elastichsearch and visualizes data in kibana.
+
+
 Cooming soon complete report in pdf and network diagram in pdf with vulnerability checks
 
 ## How
