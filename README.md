@@ -8,9 +8,9 @@ Uses www.cvdetails.com to identiy Cyber Security Vulnerabilities .
 
 Sends data to elastichsearch and visualizes data in kibana .
 
-Graphviz export - Cooming Soon
+Ansible inventory generation, group inventory per software type
 
-Ansible inventory generation - Cooming soon
+Graphviz export - Cooming Soon
 
 Shodan api - Cooming soon
 
