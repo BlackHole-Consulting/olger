@@ -12,3 +12,4 @@ Runnig this is as easy as:
 `
  ./olger.sh 192.168.0.1-255 name-mission
 
+![image olger graph d3 js](olger.png)
