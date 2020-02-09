@@ -14,6 +14,8 @@ Graphviz export, export pdf and .dot files
 
 Shodan api - Cooming soon
 
+Metasploit integration - Cooming soon
+
 
 
 ## Why
