@@ -14,6 +14,8 @@ Graphviz export, export pdf and .dot files
 
 Shodan api - Cooming soon
 
+Metasploit integration - Cooming soon
+
 
 
 ## Why
@@ -30,7 +32,7 @@ The information collected with this tool can be ilegal in some countries, someti
 ## Install the tools
 
 Execute command:
-
+```bash
 cd olger
 
 chmod +x install
@@ -38,15 +40,22 @@ chmod +x install
 ./install
 
 
+```
+
+
 ## How to plot a network graph
 
 Execute command:
 
+
+```bash
 cd olger
 
 chmod +x olger.sh (Just first time)
 
 ./olger.sh 192.168.0.1-255 name-mission
+
+```
 
 
 Outputs:
@@ -61,11 +70,17 @@ Outputs:
 
 Execute command:
 
+
+```bash
+
 cd olger
 
 chmod +x genreport.sh (Just first time)
 
 ./genreport.sh ./web/graphs/data.json name-mission
+
+
+```
 
 Outputs:
 
