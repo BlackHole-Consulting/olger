@@ -91,17 +91,17 @@ Outputs:
 
 Explore the network with browser view and D3.js Graph
 
-![image olger graph d3 js](olger.png)
+![image olger graph d3 js](img/olger.png)
 
 
 Make a plain text report with cvdetails connection
 
-![image olger report vulnerabilities CVE](report.png)
+![image olger report vulnerabilities CVE](img/report.png)
 
 
 Export pretty report to PDF and DOT files.
 
-![image olger report vulnerabilities CVE](pdfgraphd3.png)
+![image olger report vulnerabilities CVE](img/pdfgraphd3.png)
 
 
 
