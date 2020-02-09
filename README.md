@@ -16,11 +16,9 @@ Shodan api - Cooming soon
 
 ## How
 
-Runnig this is as easy as:
+Execute
 
-#### Nmap Your Target:
-`
- ./olger.sh 192.168.0.1-255 name-mission
+./olger.sh 192.168.0.1-255 name-mission
 
 ## How it looks
 
