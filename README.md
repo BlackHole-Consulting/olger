@@ -84,6 +84,12 @@ Make a plain text report with cvdetails connection
 ![image olger report vulnerabilities CVE](report.png)
 
 
+Export pretty report to PDF and DOT files.
+
+![image olger report vulnerabilities CVE](pdfgraphd3.png)
+
+
+
 Send data to elastic search and import our Dashboard in KIBANA
 
 ![image olger relastic search and kibana](kibana.png)
