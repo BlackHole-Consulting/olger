@@ -12,7 +12,7 @@ Search vulnerabilities in www.cvdetails.com
 
 Graphviz export - Cooming Soon
 
-Ansible inventory inventory generation - Cooming soon
+Ansible inventory generation - Cooming soon
 
 Shodan api - Cooming soon
 
