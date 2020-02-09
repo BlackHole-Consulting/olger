@@ -1,1 +1,3 @@
+sudo apt install python-elasticsearch
 sudo apt get install xdot
+pip install -r requirements.txt
