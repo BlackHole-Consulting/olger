@@ -1,6 +1,6 @@
 ## What olger does
 
-Olger make a network scan parse the data ans send to elastic search, make a scan report in txt .
+Olger Nmap D3.js data visualizer and ansible playbook smart generation.
 
 Local python webserver in localhost for graph visualization with D3.js .
 
