@@ -2,3 +2,5 @@ data/
 web/graphs/
 reports/
 cvedata.csv
+inventory
+node_modules/
