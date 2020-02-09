@@ -6,7 +6,7 @@ Local python webserver in localhost for graph visualization with D3.js .
 
 Uses www.cvdetails.com to identify Cyber Security Vulnerabilities .
 
-Sends data to elastichsearch and visualizes data in kibana .
+Sends data to elasticsearch and visualizes data in kibana .
 
 Ansible inventory generation, group inventory per software type
 
@@ -20,12 +20,12 @@ Metasploit integration - Cooming soon
 
 ## Why
 
-Because we are tired and do not want to work, we have created olger, for those who have to create infinite inventories in giant infrastructures and have controlled the safety of the machines, from launching a patch to installing and hardening servers or HAP balancers. Make pretty security scans and reports withour do nothing.
+Because we are tired and do not want to work, we have created olger, for those who have to create infinite inventories in giant infrastructures and have controlled the safety of the machines, from launching a patch to installing and hardening servers or HAP balancers. Make pretty security scans and reports without doing nothing.
 
 
 ## Please don't use for bad things
 
-The information collected with this tool can be ilegal in some countries, sometimes can expose big infrastructures to a dangerous consequences if you publish something, take care on that, this tools sends non malicious packets around the network to check connectivity and other cibersecurity issues.
+The information collected with this tool can be illegal in some countries, sometimes can expose big infrastructures to a dangerous consequences if you publish something, take care on that, this tool sends non malicious packets around the network to check connectivity and other cybersecurity issues.
 
 
 
@@ -64,7 +64,7 @@ Outputs:
   - web/graphs/data.json, a compatible D3.js json graph data format
   - reports/reportNameMission.txt, a plaint text data report in txt format
   - web server in port 8000, serving D3.js interactive graph
-  - elastsearch with tls support push
+  - elasticsearch with tls support push
   
 ## How to dump a workless security report
 
