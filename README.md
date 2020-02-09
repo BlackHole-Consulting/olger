@@ -19,16 +19,34 @@ Shodan api - Cooming soon
 Execute command:
 
 cd olger
+
 chmod +x olger.sh (Just first time)
+
 ./olger.sh 192.168.0.1-255 name-mission
 
+
+Outputs:
+
+  - cvedetails.cve , a csv format with vulneravilities in the network
+  - web/graphs/data.json, a compatible D3.js json graph data format
+  - reports/reportNameMission.txt, a plaint text data report in txt format
+  - web server in port 8000, serving D3.js interactive graph
+  
+  
 ## How to dump a workless security report
 
 Execute command:
 
 cd olger
+
 chmod +x genreport.sh (Just first time)
+
 ./genreport.sh ./web/graphs/data.json name-mission
+
+Outputs:
+
+  -reports/nameMission/namemission.pdf
+  -reports/nameMission/namemission.dot
 
 ## How it looks
 
