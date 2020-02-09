@@ -1,6 +1,6 @@
 ## What olger does
 
-Olger Nmap D3.js data visualizer and ansible playbook smart generation.
+Olger Nmap D3.js data visualizer with CVE check and ansible playbook smart generation.
 
 Local python webserver in localhost for graph visualization with D3.js .
 
