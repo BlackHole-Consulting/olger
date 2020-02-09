@@ -150,7 +150,7 @@ def olger_parser():
                     csv_content=""
                     cvecount=0
                     csv_content=""
-                    f = open("cvedata.csv", "w")
+                    f = open("data/cvedata.csv", "w")
                     f.write(str(""))
                     f.close()
                     if product !="" and version != "":
@@ -160,7 +160,7 @@ def olger_parser():
                         try:
 
                             os.system("python3 cvedetails-lookup.py --csv cvedata.csv --product \""+product+"\" --version \""+version+"\"")
-                            f = open("cvedata.csv")
+                            f = open("data/cvedata.csv")
                             csv_content = f.read()
                             f.close()
                             cvecount=len(str(csv_content).split("\n"))
@@ -238,7 +238,7 @@ def olger_parser():
             data_grouped=data_grouped+"\n"+inventory_by_product[a][b]+"\n"
             i=i+1
 
-    f = open("inventory", "w")
+    f = open("data/inventory", "w")
     f.write(str(data_grouped))
     f.close()
     with open("web/graphs/data.json", 'w') as outfile:

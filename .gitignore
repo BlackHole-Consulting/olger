@@ -4,3 +4,4 @@ reports/
 cvedata.csv
 inventory
 node_modules/
+data.dot
