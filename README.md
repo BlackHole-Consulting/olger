@@ -10,7 +10,11 @@ Sends data to elastichsearch and visualizes data in kibana .
 
 Search vulnerabilities in www.cvdetails.com
 
-Cooming soon complete report in pdf and network diagram in pdf with vulnerability checks
+Graphviz export - Cooming Soon
+
+Ansible inventory inventory generation - Cooming soon
+
+Shodan api - Cooming soon
 
 ## How
 
