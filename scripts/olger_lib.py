@@ -156,10 +156,10 @@ def olger_parser():
                     if product !="" and version != "":
                         print("CHEKING CVES ...")
 
-                        os.system("python3 cvedetails-lookup.py --csv cvedata.csv --product \""+product+"\" --version \""+version+"\"")
+                        os.system("python3 scripts/cvdetails-lookup.py --csv data/cvedata.csv --product \""+product+"\" --version \""+version+"\"")
                         try:
 
-                            os.system("python3 cvedetails-lookup.py --csv cvedata.csv --product \""+product+"\" --version \""+version+"\"")
+                            os.system("python3 scripts/cvdetails-lookup.py --csv data/cvedata.csv --product \""+product+"\" --version \""+version+"\"")
                             f = open("data/cvedata.csv")
                             csv_content = f.read()
                             f.close()
