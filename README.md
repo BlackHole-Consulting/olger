@@ -14,12 +14,21 @@ Graphviz export - Cooming Soon
 
 Shodan api - Cooming soon
 
-## How
+## How to plot a network graph
 
-Execute
+Execute command:
+
 cd olger
 chmod +x olger.sh
 ./olger.sh 192.168.0.1-255 name-mission
+
+## How to plot a network graph
+
+Execute command:
+
+cd olger
+chmod +x olger.sh
+./genreport.sh ./web/graphs/data.json name-mission
 
 ## How it looks
 
