@@ -22,6 +22,9 @@ Runnig this is as easy as:
 
 Explore the network with browser view and D3.js Graph
 
+
+
+## How it looks
 ![image olger graph d3 js](olger.png)
 
 
