@@ -45,11 +45,15 @@ chmod +x install
 
 Execute command:
 
+
+```bash
 cd olger
 
 chmod +x olger.sh (Just first time)
 
 ./olger.sh 192.168.0.1-255 name-mission
+
+```
 
 
 Outputs:
@@ -64,11 +68,17 @@ Outputs:
 
 Execute command:
 
+
+```bash
+
 cd olger
 
 chmod +x genreport.sh (Just first time)
 
 ./genreport.sh ./web/graphs/data.json name-mission
+
+
+```
 
 Outputs:
 
