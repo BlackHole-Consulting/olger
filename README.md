@@ -14,6 +14,16 @@ Graphviz export, export pdf and .dot files
 
 Shodan api - Cooming soon
 
+
+## Install the tools
+
+Execute command:
+
+cd olger
+chmod +x install
+./install
+
+
 ## How to plot a network graph
 
 Execute command:
