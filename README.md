@@ -15,4 +15,4 @@ Runnig this is as easy as:
 ![image olger graph d3 js](olger.png)
 
 
-![image olger report vulnerabilities CVE](txtreport.png)
+![image olger report vulnerabilities CVE](report.png)
