@@ -1,6 +1,6 @@
 ## What olger does
 
-Olger make a network scan parse the data ans send to elastic search, make a scan report in txt .
+Olger Nmap D3.js data visualizer and ansible playbook smart generation.
 
 Local python webserver in localhost for graph visualization with D3.js .
 
@@ -10,16 +10,43 @@ Sends data to elastichsearch and visualizes data in kibana .
 
 Ansible inventory generation, group inventory per software type
 
-Graphviz export - Cooming Soon
+Graphviz export, export pdf and .dot files
 
 Shodan api - Cooming soon
 
-## How
+## How to plot a network graph
 
-Execute
+Execute command:
+
 cd olger
-chmod +x olger.sh
+
+chmod +x olger.sh (Just first time)
+
 ./olger.sh 192.168.0.1-255 name-mission
+
+
+Outputs:
+
+  - cvedetails.cve , a csv format with vulneravilities in the network
+  - web/graphs/data.json, a compatible D3.js json graph data format
+  - reports/reportNameMission.txt, a plaint text data report in txt format
+  - web server in port 8000, serving D3.js interactive graph
+  - elastsearch with tls support push
+  
+## How to dump a workless security report
+
+Execute command:
+
+cd olger
+
+chmod +x genreport.sh (Just first time)
+
+./genreport.sh ./web/graphs/data.json name-mission
+
+Outputs:
+
+  -reports/nameMission/namemission.pdf
+  -reports/nameMission/namemission.dot
 
 ## How it looks
 
