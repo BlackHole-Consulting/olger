@@ -218,8 +218,4 @@ def olger_parser():
 
         
 
-#try:
-checkcves()
-#except:
-#    pass
-
+olger_parser()
