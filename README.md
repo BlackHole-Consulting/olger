@@ -30,12 +30,15 @@ The information collected with this tool can be ilegal in some countries, someti
 ## Install the tools
 
 Execute command:
-
+```bash
 cd olger
 
 chmod +x install
 
 ./install
+
+
+```
 
 
 ## How to plot a network graph
