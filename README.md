@@ -4,11 +4,9 @@ Olger make a network scan parse the data ans send to elastic search, make a scan
 
 Local python webserver in localhost for graph visualization with D3.js .
 
-Uses cvdetails.com to identiy Cyber Security Vulnerabilities .
+Uses www.cvdetails.com to identiy Cyber Security Vulnerabilities .
 
 Sends data to elastichsearch and visualizes data in kibana .
-
-Search vulnerabilities in www.cvdetails.com
 
 Graphviz export - Cooming Soon
 
