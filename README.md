@@ -23,7 +23,7 @@ Because we are tired and do not want to work, we have created olger, for those w
 
 ## Please don't use for bad things
 
-The information collected with this tool can be ilegal in some countries, sometimes can expose big infrastructures to a dangerous consecuences if you publish something, take care on that, this tools sends non malicious packets around the network to check connectivity and other cibersecurity issues.
+The information collected with this tool can be ilegal in some countries, sometimes can expose big infrastructures to a dangerous consequences if you publish something, take care on that, this tools sends non malicious packets around the network to check connectivity and other cibersecurity issues.
 
 
 
