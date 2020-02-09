@@ -10,7 +10,7 @@ Sends data to elastichsearch and visualizes data in kibana .
 
 Ansible inventory generation, group inventory per software type
 
-Graphviz export - Cooming Soon
+Graphviz export, export pdf and .dot files
 
 Shodan api - Cooming soon
 
