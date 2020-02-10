@@ -77,7 +77,7 @@ cd olger
 
 chmod +x genreport.sh (Just first time)
 
-./genreport.sh ./web/graphs/data.json name-mission
+./scripts/genreport.sh ./web/graphs/data.json name-mission
 
 
 ```
@@ -85,6 +85,7 @@ chmod +x genreport.sh (Just first time)
 Outputs:
 
   -reports/nameMission/namemission.pdf
+  
   -reports/nameMission/namemission.dot
 
 ## How it looks

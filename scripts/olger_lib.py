@@ -77,7 +77,7 @@ def olger_parser():
         if "up" in x["status"]:
             
             
-            nodes.append({"id":str(id)+""+str(x["ip"]),"host":str(id)+""+str(x["ip"])})
+            nodes.append({"id":str(id)+""+str(x["ip"]),"host":str(x["ip"])})
             
             for e in x["services"]:
                 if "open" in e["state"]: 
@@ -221,10 +221,9 @@ def olger_parser():
                             pass
                     
 
-                    #print(toelastic)
                     #send data to elastic
                     #print(elkpush("box_"+sys.argv[2],toelastic))
-                    id=id+1
+            id=id+1
             graph={"nodes": nodes,"links":links}
 
  
