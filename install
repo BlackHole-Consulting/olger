@@ -7,3 +7,4 @@ sudo apt install msfconsole
 pip install -r requirements.txt
 mkdir ./reports
 mkdir ./data
+mkdir ./lists

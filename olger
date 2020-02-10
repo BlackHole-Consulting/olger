@@ -1,0 +1,127 @@
+#!/bin/sh
+set -e
+
+PROGNAME=$(basename $0)
+
+die() {
+    echo "$PROGNAME: $*" >&2
+    exit 1
+}
+
+usage() {
+    if [ "$*" != "" ] ; then
+        echo "Error: $*"
+    fi
+
+    cat << EOF
+
+Usage: $PROGNAME [OPTION ...] [foo] [bar]
+Olger a Red Team tool with ansible playbooks and D3.js Graph visualization.
+
+Options:
+
+-h, --help          display this usage message and exit
+
+-n, --genfromnmap  [RANGE] [MISSION]     delete things
+
+-s, --genfromshodan [QUERY] write output to file
+
+-m, --msfconsole [EXPLOIT_CHECK] [PAYLOAD] [CMD] [LIST] execute msf command for each input in the list
+
+-r, --report [MISSION] write output to file in pdf and dot format
+
+-q, --query [DIR] [QUERY] make querys over raw json or csv data
+
+
+EOF
+
+    exit 1
+}
+
+foo=""
+bar=""
+delete=0
+output="-"
+while [ $# -gt 0 ] ; do
+    case "$1" in
+    -h|--help)
+        usage
+        ;;
+    -n|--genfromnmap)
+            #scan with nmap an save the results
+            nmap -sV -A $2 -oX data/nmap$3.xml
+
+            #convert the results to json
+            python3 ./bin/converter.py data/nmap$3.xml data/nmap$3.xml.json
+            #process the data to a json d3 graph
+            python scripts/olger_lib.py data/nmap$3.xml.json > reports/report$3.txt
+            #execute the web visualizer server
+            cd web
+            python3 -m http.server
+        ;;
+    -|--msfconsole)
+            #scan with nmap an save the results
+            nmap -sV -A $2 -oX data/nmap$3.xml
+
+            #convert the results to json
+            python3 ./bin/converter.py data/nmap$3.xml data/nmap$3.xml.json
+            #process the data to a json d3 graph
+            python scripts/olger_lib.py data/nmap$3.xml.json > reports/report$3.txt
+            #execute the web visualizer server
+            cd web
+            python3 -m http.server
+        ;;
+    -s|--genfromshodan)
+            
+            node scripts/shodan.js $2
+
+            #convert the results to json
+            #process the data to a json d3 graph
+            #execute the web visualizer server
+                      
+
+        shift
+        ;;
+    -*)
+        usage "Unknown option '$1'"
+        ;;
+    *)
+        if [ -z "$foo" ] ; then
+            foo="$1"
+        elif [ -z "$bar" ] ; then
+            bar="$1"
+        else
+            usage "Too many arguments"
+        fi
+        ;;
+    esac
+    shift
+done
+
+if [ -z "$bar" ] ; then
+    usage "Not enough arguments"
+fi
+
+cat <<EOF
+foo=$foo
+bar=$bar
+delete=$delete
+output=$output
+EOF
+
+
+if [ $# == 0 ]; then
+    echo "Usage: $0 ip-range report_name"
+    echo "* param1 example: 192.168.0.1-255"
+    echo "* param2 example: home"
+fi
+#scan with nmap an save the results
+nmap -sV -A $1 -oX data/nmap$2.xml
+
+#convert the results to json
+python3 ./bin/converter.py data/nmap$2.xml data/nmap$2.xml.json
+#process the data to a json d3 graph
+python scripts/olger_lib.py data/nmap$2.xml.json > reports/report$2.txt
+#execute the web visualizer server
+cd web
+python3 -m http.server
