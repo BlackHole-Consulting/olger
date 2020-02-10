@@ -77,7 +77,7 @@ cd olger
 
 chmod +x genreport.sh (Just first time)
 
-./genreport.sh ./web/graphs/data.json name-mission
+./scripts/genreport.sh ./web/graphs/data.json name-mission
 
 
 ```
