@@ -3,6 +3,7 @@ sudo apt install python-elasticsearch
 sudo apt-get install xdot
 sudo apt install nmap
 sudo apt install python3-libnmap
+sudo apt install python3-dateutil
 pip install -r requirements.txt
 mkdir ./reports
 mkdir ./data
