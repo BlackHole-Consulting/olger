@@ -2,8 +2,12 @@ sudo apt-get install python-pip
 sudo apt install python-elasticsearch
 sudo apt-get install xdot
 sudo apt install nmap
+sudo apt install msfconsole
 sudo apt install python3-libnmap
 sudo apt install python3-dateutil
+sudo apt install python-xmltodic
+sudo npm install shodan -g
 pip install -r requirements.txt
 mkdir ./reports
 mkdir ./data
+mkdir ./lists

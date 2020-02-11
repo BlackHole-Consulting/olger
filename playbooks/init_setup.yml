@@ -17,6 +17,10 @@
         msg: 'Logging in as {{ username }}'
 
     - shell:
+        cmd : "ls"
         cmd: 'scripts/ssh_setup.sh {{ privatekey }}'
+        
     - wincommand:
+        #add windows
         stdin: 'dir'
+        

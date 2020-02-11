@@ -1,0 +1,31 @@
+- hosts: "{{ hostname }}"
+  gather_facts: False
+  vars_prompt:
+
+  - name: reponame
+    prompt: "Respository name ?"
+    private: yes
+  
+  - name: git_base_dir
+    prompt: "Respository base dir ?"
+    private: yes
+
+  - name: project
+    prompt: "Project Name ?"
+    private: yes
+
+  tasks:
+    - name: git init --bare {{ project }} with the command module
+      command: git init --bare {{project}}
+      args:
+        chdir: "{{ git_base_dir }}"
+      become_user: git
+   
+    - name: Set the permissions on {{ git_base_dir }}/{{ project }}
+      file:
+        path: "{{ git_base_dir }}/{{ project }}"
+        state: directory
+        mode: 0755
+        owner: git
+        group: git
+        recurse: True
