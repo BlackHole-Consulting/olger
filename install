@@ -7,6 +7,9 @@ sudo apt install python3-libnmap
 sudo apt install python3-dateutil
 sudo apt install python-xmltodic
 sudo npm install shodan -g
+npm install npm
+npm install
+npm audit fix
 pip install -r requirements.txt
 mkdir ./reports
 mkdir ./data
