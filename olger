@@ -16,7 +16,7 @@ usage() {
     cat << EOF
 
 Usage: $PROGNAME [OPTION ...] [foo] [bar]
-Olger a Red Team tool with ansible playbooks and D3.js Graph visualization.
+Olger a Red Team tool with ansible playbooks to repair things , D3.js Graph visualization, metasploit and shodan
 
 Options:
 
@@ -24,13 +24,15 @@ Options:
 
 -n, --genfromnmap  [RANGE] [MISSION]     delete things
 
+-f, --genfromfile [FILE] generate a graph from nmap xml file
+
 -s, --genfromshodan [QUERY] write output to file
 
 -m, --msfconsole [EXPLOIT_CHECK] [PAYLOAD] [CMD] [LIST] execute msf command for each input in the list
 
 -r, --report [MISSION] write output to file in pdf and dot format
 
--q, --query [DIR] [QUERY] make querys over raw json or csv data
+-q, --query [DIR] [QUERY] make querys over raw json or csv data (not ready)
 
 
 EOF
@@ -59,26 +61,34 @@ while [ $# -gt 0 ] ; do
             cd web
             python3 -m http.server
         ;;
-    -|--msfconsole)
-            #scan with nmap an save the results
-            nmap -sV -A $2 -oX data/nmap$3.xml
 
+    -f|--genfromfile)
             #convert the results to json
-            python3 ./bin/converter.py data/nmap$3.xml data/nmap$3.xml.json
+            python3 ./bin/converter.py $3 data/nmap$3.xml.json
             #process the data to a json d3 graph
             python scripts/olger_lib.py data/nmap$3.xml.json > reports/report$3.txt
             #execute the web visualizer server
             cd web
             python3 -m http.server
         ;;
-    -s|--genfromshodan)
-            
-            node scripts/shodan.js $2
+    -r|--report)
+        
+            #convert graph to a pdf and dot files
+            node scripts/graphpdf.js $1 | dot -Tpdf > ~/reports/$2/report$2.pdf
+            node scripts/graphpdf.js $1 > ./data.dot && xdot ./reports/$2/data$2.dot  
 
-            #convert the results to json
-            #process the data to a json d3 graph
-            #execute the web visualizer server
-                      
+        ;;
+    -m|--msfconsole)
+            #aply metasploit execution to each argument in the list
+            python3 scripts/olger_msfconsole.py $2 $3 $4 $5
+
+        ;;
+
+    -s|--genfromshodan)
+
+            #generate shodan graph and files, you can use this files to launch masive security checks over infrastructures, the shodan list in csv format will be saved in lists forlder            
+            node scripts/shodan.js $2
+            echo "you can find the output in lists/$2 launch "
 
         shift
         ;;
