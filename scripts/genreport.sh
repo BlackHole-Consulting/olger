@@ -7,5 +7,5 @@ if [ $# == 0 ]; then
 fi
 
 
-node scripts/graphpdf.js $1 | dot -Tpdf > ~/reports/$2/report$2.pdf
+node scripts/graphpdf.js $1 | dot -Tpdf > ./reports/$2/report$2.pdf
 node scripts/graphpdf.js $1 > ./data.dot && xdot ./reports/$2/data$2.dot  
