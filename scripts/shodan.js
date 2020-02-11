@@ -1,5 +1,5 @@
 var ShodanClient = require('shodan-api');
-var client = new ShodanClient({ key: 'SGuR0TGv7hvO7DOxOALtD7EJWsu79NJv' });
+var client = new ShodanClient({ key: '' });
 var fs = require('fs');
 
 var query = process.argv[2];
