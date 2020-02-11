@@ -12,10 +12,9 @@ Ansible inventory generation, group inventory per software type
 
 Graphviz export, export pdf and .dot files
 
-Shodan api - Cooming soon
+Shodan api
 
-Metasploit integration - Cooming soon
-
+Metasploit integration
 
 
 ## Why
