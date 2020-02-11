@@ -4,3 +4,4 @@ colored
 prettytable
 requests
 xmltodict
+python-nmap
