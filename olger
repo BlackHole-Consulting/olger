@@ -64,7 +64,7 @@ while [ $# -gt 0 ] ; do
 
     -f|--genfromfile)
             #convert the results to json
-            python3 ./bin/converter.py $3 data/nmap$3.xml.json
+            python3 ./bin/converter.py $2 data/nmap$3.xml.json
             #process the data to a json d3 graph
             python scripts/olger_lib.py data/nmap$3.xml.json > reports/report$3.txt
             #execute the web visualizer server
@@ -89,8 +89,6 @@ while [ $# -gt 0 ] ; do
             #generate shodan graph and files, you can use this files to launch masive security checks over infrastructures, the shodan list in csv format will be saved in lists forlder            
             node scripts/shodan.js $2
             echo "you can find the output in lists/$2 launch "
-
-        shift
         ;;
     -*)
         usage "Unknown option '$1'"
@@ -120,18 +118,3 @@ output=$output
 EOF
 
 
-if [ $# == 0 ]; then
-    echo "Usage: $0 ip-range report_name"
-    echo "* param1 example: 192.168.0.1-255"
-    echo "* param2 example: home"
-fi
-#scan with nmap an save the results
-nmap -sV -A $1 -oX data/nmap$2.xml
-
-#convert the results to json
-python3 ./bin/converter.py data/nmap$2.xml data/nmap$2.xml.json
-#process the data to a json d3 graph
-python scripts/olger_lib.py data/nmap$2.xml.json > reports/report$2.txt
-#execute the web visualizer server
-cd web
-python3 -m http.server

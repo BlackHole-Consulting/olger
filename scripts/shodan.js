@@ -1,10 +1,9 @@
 var ShodanClient = require('shodan-api');
-var client = new ShodanClient({ key: '' });
+var client = new ShodanClient({ key: 'SGuR0TGv7hvO7DOxOALtD7EJWsu79NJv' });
 var fs = require('fs');
 
-var query = process.argv[2]+" "+ process.argv[3]
+var query = process.argv[2];
 
-console.log(client);
 function getlist (pagina){
 
   const searchOpts = {
@@ -14,8 +13,8 @@ function getlist (pagina){
   };
 
   client.search(query, searchOpts, function (err, response) {
-    var ret = JSON.stringify(response)
-    console.log(query);
+    var ret = JSON.stringify(response);
+    console.log(query+"x");
     console.log(response.length);
     var parsedResponse = JSON.parse(ret);
     console.log(parsedResponse);
@@ -48,10 +47,9 @@ function getlist (pagina){
 
 
 function save(data,ip,port) {
+  console.log(query.split(' ').join(''));
     try {
-      //raw json
-      //fs.appendFileSync("lists/"+ip+".hole", data);
-      fs.appendFileSync("lists/"+query,ip+","+port+"\n")
+      fs.appendFileSync("lists/"+query, ip+","+port+"\n")
     } catch (err) {
       /* Handle the error */
     }
