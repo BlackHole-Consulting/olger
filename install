@@ -5,7 +5,8 @@ sudo apt install nmap
 sudo apt install msfconsole
 sudo apt install python3-libnmap
 sudo apt install python3-dateutil
-sudo apt install python-xmltodic
+sudo apt install python-xmltodict
+sudo apt install npm
 sudo npm install shodan -g
 npm install npm
 npm install
@@ -14,3 +15,4 @@ pip install -r requirements.txt
 mkdir ./reports
 mkdir ./data
 mkdir ./lists
+mkdir ./web/graphs
