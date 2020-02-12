@@ -51,7 +51,7 @@ while [ $# -gt 0 ] ; do
         ;;
     -n|--genfromnmap)
             #scan with nmap an save the results
-            nmap -sV -A $2 -oX data/nmap$3.xml
+            nmap -v -sV -A $2 -oX data/nmap$3.xml
 
             #convert the results to json
             python3 ./bin/converter.py data/nmap$3.xml data/nmap$3.xml.json
