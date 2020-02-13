@@ -66,6 +66,8 @@ Execute command:
 ```bash
 cd olger
 
+chmod +x olger (first time only)
+
 ./olger -n 192.168.0.1-255 name-mission
 
 ```
@@ -91,7 +93,7 @@ Execute command:
 
 cd olger
 
-chmod +x ./scripts/genreport.sh (Just first time)
+chmod +x olger (Just first time)
 
 ./olger -r ./web/graphs/data.json name-mission
 
