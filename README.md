@@ -34,7 +34,7 @@ Execute command:
 ```bash
 cd olger
 
-chmod +x ./scripts/install
+chmod +x ./install
 
 ./install
 
