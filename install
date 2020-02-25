@@ -6,6 +6,9 @@ sudo apt install msfconsole
 sudo apt install python3-libnmap
 sudo apt install python3-dateutil
 sudo npm install shodan -g
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt update -y
+sudo apt install ansible -y
 pip install -r requirements.txt
 mkdir ./reports
 mkdir ./data
