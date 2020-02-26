@@ -6,3 +6,4 @@ requests
 xmltodict
 python-nmap
 colored
+pywinrm
