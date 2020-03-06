@@ -91,6 +91,7 @@ while [ $# -gt 0 ] ; do
         ;;
     -p|--hapgen)
             #generate ha proxy configuration, take a look scripts/gen_ha_proxy.py scripts for more details            
+            
             python scripts/gen_ha_proxy.py $2
             echo "configuration file generated in data/haproxy.conf"
         ;;

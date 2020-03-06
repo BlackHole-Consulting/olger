@@ -48,12 +48,21 @@ chmod +x ./install
 Usage: $PROGNAME [OPTION ...] [foo] [bar]
 Olger a Red Team tool with ansible playbooks to repair things , D3.js Graph visualization, metasploit and shodan
 Options:
+
 -h, --help          display this usage message and exit
+
 -n, --genfromnmap  [RANGE] [MISSION]     delete things
+
 -f, --genfromfile [FILE] generate a graph from nmap xml file
+
 -s, --genfromshodan [QUERY] write output to file
+
 -m, --msfconsole [EXPLOIT_CHECK] [PAYLOAD] [CMD] [LIST] execute msf command for each input in the list
+
 -r, --report [MISSION] write output to file in pdf and dot format
+
+-p, --hapgen [DATAFILE] Generate haproxy configuration
+
 -q, --query [DIR] [QUERY] make querys over raw json or csv data (not ready)
 
 ```
