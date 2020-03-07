@@ -1,1 +1,4 @@
-#Empty file
+- name: Install elasticsearch kibana and filebeat
+  shell: scripts/install_elk.sh >> somelog.txt
+#  args:
+#    chdir: somedir/
