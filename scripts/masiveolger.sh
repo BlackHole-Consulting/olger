@@ -17,8 +17,8 @@ for f in $basepath/data/$1/*; do
 						ext="${f2: -4}"
 						if [[ ".xml" == $ext ]]
 						then
-							python3 $basepath/CVES/CVE-Scan/bin/converter.py  "$f2" "$f2".json	
-              						python $basepath/CVES/CVE-Scan/nmaptograph.py "$f2".json "$1"
+							python3 $basepath/bin/converter.py  "$f2" "$f2".json	
+              						python $basepath/bin/maptograph.py "$f2".json "$1"
 						fi
 					done
 			fi
