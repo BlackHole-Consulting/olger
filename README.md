@@ -123,11 +123,11 @@ chmod +x olger (Just first time)
 
 ```
 
+
 Outputs:
 
-  -reports/nameMission/namemission.pdf
-  
-  -reports/nameMission/namemission.dot
+  - reports/nameMission/namemission.pdf
+  - reports/nameMission/namemission.dot
   
   
 ## Configure elastic search to visualize data in kibana
