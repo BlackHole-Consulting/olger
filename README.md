@@ -23,6 +23,10 @@ Metasploit integration
 
 Because we are tired and we not want to work, we have created olger, for those who have to create infinite inventories in giant infrastructures and have controlled the safety of the machines, from launching a patch to installing and hardening servers or HAP balancers. Make pretty security scans and reports without doing nothing.
 
+In the most of the big infrastructures they have a lot of internal services to manage his infrastructures, for do that , normally no body thinks in the security and is a super bridge, you can ping to your bureaucratized , scan them, a lot of trafic arent encrypted, a lot s passwords in plain ...
+
+The timing to repair or modify things is extremlly bureaucratized, and normally is by hand going to the machines and making the changes, we want to work less , this is the reason for olger, keep your organization controlled in security terms, repair fast and in a easy way, and keep your network isolated. 
+
 
 ## Please don't use for bad things
 
