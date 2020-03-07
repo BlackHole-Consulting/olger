@@ -116,6 +116,30 @@ Outputs:
   -reports/nameMission/namemission.pdf
   
   -reports/nameMission/namemission.dot
+  
+  
+## Configure elastic search to visualize data in kibana
+
+Edit scripts(olger_lib.py
+
+Change the auth parameters in the file, elastic and authkey and the url of your elastic service, for example https://yourdomain.com:9200 , remember use tls encryption in your server to prevent expose data in the network.
+
+```
+
+def elkpush(indexdat,jsondat):
+
+        es = Elasticsearch(
+                ['host.domain'],
+                scheme="https",
+                verify_certs=False,
+                http_auth=('elastic', 'auth-key'),
+		port=9200
+	)
+	print(es.index(index=indexdat,doc_type="security_report", body=json.dumps(jsondat)))
+
+
+
+```
 
 ## How it looks
 
