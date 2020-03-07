@@ -102,7 +102,7 @@ Outputs:
   - web/graphs/data.json, a compatible D3.js json graph data format
   - reports/reportNameMission.txt, a plaint text data report in txt format
   - web server in port 8000, serving D3.js interactive graph
-  - elasticsearch with tls support push
+  - elasticsearch with tls push
  
  
  
