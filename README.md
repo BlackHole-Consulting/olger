@@ -219,6 +219,12 @@ Getting shells anywhere or execute commands in remote hosts.
 
 Add any line to cronjobs file /etc/crontab for scheduled tasks 
 
+````
+
+0 2 * * * /olgerfolder/olger -n 192.168.0.1-255
+
+````
+Example to execute task all days at 2 am
 ## How it looks
 
 Explore the network with browser view and D3.js Graph
