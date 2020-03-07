@@ -186,4 +186,6 @@ Export pretty report to PDF and DOT files.
 
 Send data to elastic search and import our Dashboard in KIBANA
 
-![image olger relastic search and kibana](kibana.png)
+![image olger relastic search and kibana](kibana1.png)
+![image olger relastic search and kibana](kibana2.png)
+![image olger relastic search and kibana](kibana3.png)
