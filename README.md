@@ -184,7 +184,7 @@ Output
   -data/haproxy.conf
   
 
-csv lie format
+csv file format
 
 iphaproxy,domainname,http,ipbackend,portbackend,urlredirect
 
