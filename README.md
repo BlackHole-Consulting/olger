@@ -1,6 +1,6 @@
 ## What olger does
 
-Olger Nmap D3.js data visualizer with CVE check and ansible playbook smart generation.
+Olger Nmap D3.js data visualizer with CVE check and ansible inventories smart generation.
 
 Local python webserver in localhost for graph visualization with D3.js .
 
@@ -13,6 +13,8 @@ Ansible inventory generation, group inventory per software type
 Graphviz export, export pdf and .dot files
 
 Shodan api
+
+Generates HA proxy configs for big networks
 
 Metasploit integration
 
