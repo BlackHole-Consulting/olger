@@ -199,7 +199,8 @@ olger -p data/internal_services.csv
 ````
 
 Output
- 	- data/haproxy.conf
+ 	
+	- data/haproxy.conf
   
 
 Csv file format
