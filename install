@@ -8,6 +8,7 @@ sudo apt install python3-dateutil
 sudo apt install python-xmltodic
 sudo npm install shodan -g
 sudo apt install metasploit-framework
+sudo apt install ansible
 npm install npm
 npm install
 npm audit fix
