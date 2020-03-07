@@ -270,8 +270,9 @@ Send data to elastic search and import our Dashboard in KIBANA
 
 # Acknowledgment
 
-PeterBank : My most sincere gratitude and recognition to Olger T., who has taught me about cybersecurity these months.
- 	    My most sincere gratitude and recognition to Angel L. and his cybersecurity company, who allow me to join to this world
+My most sincere gratitude and recognition to Olger T., who has taught me about cybersecurity these months.
+
+My most sincere gratitude and recognition to Angel L. and his cybersecurity company, who allow me to join to this world
 
 
 ## License and rights
