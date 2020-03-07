@@ -134,7 +134,7 @@ Install elastic search and kibana
 
 ./scripts/install_elk.sh
 
-./scripts/setup_certs_elk.sh
+./scripts/setup_certs_elk.sh yourdomaindotcomorlocaldomain
 
 
 ```
