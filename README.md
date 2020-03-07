@@ -210,6 +210,13 @@ Edit scripts/shodan.js
 
 Add your api key
 
+````
+
+var client = new ShodanClient({ key: '' });
+
+````
+
+
 Execution
 
 ````
