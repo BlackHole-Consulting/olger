@@ -189,6 +189,17 @@ csv file format
 iphaproxy,domainname,http,ipbackend,portbackend,urlredirect
 
 
+## Configure and use shodan
+
+Edit scripts shodan.js
+Add your api key
+
+````
+
+./olger -s "your search here"
+
+````
+
 ## Hacking all with olger
 
 Is just an example never do in real world
