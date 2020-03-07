@@ -142,7 +142,7 @@ def elkpush(indexdat,jsondat):
 
 ```
 
-Uncomment line 225 
+Uncomment line 225 (remove #)
 
 ````
  #print(elkpush("box_"+sys.argv[2],toelastic))
