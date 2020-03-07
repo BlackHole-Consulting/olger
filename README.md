@@ -179,7 +179,13 @@ Output
 
   -data/haproxy.conf
   
-  
+
+csv lie format
+
+iphaproxy,domainname,http,ipbackend,portbackend,urlredirect
+
+
+
 ## How it looks
 
 Explore the network with browser view and D3.js Graph
