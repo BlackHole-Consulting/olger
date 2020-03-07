@@ -192,19 +192,17 @@ The motivation to do this after scan a network is make simple the network harden
 
 
 
-```
+````
 
 olger -p data/internal_services.csv
 
-```
+````
 
 Output
-
-
-	-data/haproxy.conf
+ 	- data/haproxy.conf
   
 
-csv file format
+Csv file format
 
 iphaproxy,domainname,http,ipbackend,portbackend,urlredirect
 
