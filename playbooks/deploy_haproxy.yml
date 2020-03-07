@@ -1,1 +1,7 @@
 
+
+  tasks:
+
+    - shell:
+        cmd : "scp data/haproxy.conf" root@$server:/etc/haproxy/haproxy.cfg
+        cmd: 'service haproxy restart'
