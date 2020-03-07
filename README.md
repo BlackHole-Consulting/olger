@@ -232,7 +232,13 @@ Getting shells anywhere or execute commands in remote hosts.
 
 
 ```
+
+
 This example search all dlink routers in the world and show his remote administrator password (Not do if you aren't the owner of the devices or you have permit)
+
+
+Please don't use for deploy botnets, hack corporations or goverments.
+
 
 ## Cront Jobs
 
