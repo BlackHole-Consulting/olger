@@ -1,4 +1,5 @@
 - name: Install elasticsearch kibana and filebeat
-  shell: scripts/install_elk.sh >> somelog.txt
+  shell: scripts/install_elk.sh >> elkinstall_log.txt
+  shell: scripts/setup_certs_elk.sh >> certs_log.txt
 #  args:
 #    chdir: somedir/
