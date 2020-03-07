@@ -147,6 +147,18 @@ def elkpush(indexdat,jsondat):
 The motivation to do this after scan a network is make simple the network hardening any where, cut all connections between devices and redirect all trafic to de haproxy, this keeps the network splited and prevents comunications between devices, redirecting all network services in a central point, balanced to higth disponibility . Solve a lot of problems, and encrypt all the network with the minium deployment in the infrastructure, works in parallel while people is testing and one time is ready with a simple ip table rules , the entire network is isolated
 
 
+
+```
+
+olger -p data/internal_services.csv
+
+```
+
+Output
+
+  -data/haproxy.conf
+  
+  
 ## How it looks
 
 Explore the network with browser view and D3.js Graph
