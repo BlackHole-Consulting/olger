@@ -14,7 +14,7 @@ Graphviz export, export pdf and .dot files
 
 Shodan api
 
-Generates HA proxy configs for protect big networks
+Generates HAPROXY configs for protect big networks
 
 Metasploit integration
 
