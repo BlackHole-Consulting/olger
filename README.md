@@ -128,6 +128,18 @@ Outputs:
   
 ## Configure elastic search to visualize data in kibana
 
+Install elastic search and kibana
+
+```
+
+./scripts/install_elk.sh
+
+./scripts/setup_certs_elk.sh
+
+
+```
+
+
 Edit scripts/olger_lib.py
 
 Change the auth parameters in the file, elastic and authkey and the url of your elastic service, for example https://yourdomain.com:9200 , remember use tls encryption in your server to prevent expose data in the network.
