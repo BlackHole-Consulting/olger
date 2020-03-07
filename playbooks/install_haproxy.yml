@@ -1,1 +1,4 @@
-#
+- name: Install elasticsearch kibana and filebeat
+  shell: scripts/install_haproxy.sh >> somelog.txt
+#  args:
+#    chdir: somedir/
