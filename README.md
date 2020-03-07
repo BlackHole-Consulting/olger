@@ -215,6 +215,9 @@ Getting shells anywhere or execute commands in remote hosts.
 
 ```
 
+## Cront Jobs
+
+Add any line to cronjobs file /etc/crontab for scheduled tasks 
 
 ## How it looks
 
