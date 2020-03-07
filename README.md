@@ -149,6 +149,20 @@ Uncomment line 225 (remove #)
  
 ````
 
+Import dashboard file network_devices.ndjson in your kibana.
+
+
+
+    Go to Kibana
+    Click on Management
+    Click on Saved Objects
+    Click on the Import button
+    Browse the exported file
+    You will then be prompted: "If any of the objects already exist, do you want to automatically overwrite them?" and you will be given the following options:
+        No, prompt me for each one
+        Yes, overwrite all
+
+
 ## Generate HAPROXY configuration
 
 The motivation to do this after scan a network is make simple the network hardening any where, cut all connections between devices and redirect all trafic to de haproxy, this keeps the network splited and prevents comunications between devices, redirecting all network services in a central point, balanced to higth disponibility . Solve a lot of problems, and encrypt all the network with the minium deployment in the infrastructure, works in parallel while people is testing and one time is ready with a simple ip table rules , the entire network is isolated
