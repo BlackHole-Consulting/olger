@@ -53,7 +53,7 @@ chmod +x ./install
 
 ```bash
 
-Usage: $PROGNAME [OPTION ...] [foo] [bar]
+Usage: ./olger [OPTION ...] [foo] [bar]
 
 Olger a Red Team tool with ansible playbooks to repair things , D3.js Graph visualization, metasploit, shodan, kibana and elasticsearch.
 
