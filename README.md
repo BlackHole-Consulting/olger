@@ -307,6 +307,5 @@ My most sincere gratitude and recognition to Angel L. and his cybersecurity comp
 
 Just you can use for non proffit activities, never for commercial use, distribution part of the content for comercial purposes or make any kind of proffit are forbbiden,
 
-Talk with the authors for that, we have a really better version for commercial purposes.
-
+Talk with the authors for that.
 
