@@ -9,8 +9,8 @@
     - name: password
       prompt: "What is your password?"
 
-    - name: privatekey
-      prompt: "What is your Private Key?"
+    - name: publickey
+      prompt: "What is your Public Key?"
 
   tasks:
     - debug:
@@ -18,7 +18,7 @@
 
     - shell:
         cmd : "ls"
-        cmd: 'scripts/ssh_setup.sh {{ privatekey }}'
+        cmd: 'scripts/ssh_setup.sh {{ publickey }}'
         
     - name: Run the setup.exe installer on multiple servers using the Domain Administrator
       win_psexec:
@@ -27,5 +27,5 @@
         - remote_server1
         - remote_server2
         username: DOMAIN\username
-        password: some_password
+        password: {{ password }}
         priority: high
