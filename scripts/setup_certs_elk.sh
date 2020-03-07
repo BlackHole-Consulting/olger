@@ -6,7 +6,7 @@ mkdir tmp
 mkdir tmp/cert_blog
 
 sudo echo "127.0.0.1 kibana.local logstash.local" >> /etc/hosts
-sudo echo "blackhole $1 blackhole" >> /etc/hosts
+sudo echo "127.0.0.1 $1" >> /etc/hosts
 
 sudo /usr/share/elasticsearch/bin/elasticsearch-certutil cert ca --pem --in ~/tmp/cert_blog/instance.yml --out ~/tmp/cert_blog/certs.zip
 
