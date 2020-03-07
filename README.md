@@ -201,13 +201,12 @@ Execution
 
 ./olger -s "your search here"
 
+
 ````
 
 ## Metasploit module
 
-Just a line with the exploit to use, the payload, the command and the list to apply each metasploit command. Be carefully and don't use if you don't know how, you can cause big damages if you don't know how to use or you want to cause big damages.
-
-
+Just a line with the exploit to use, the payload, the command and the list to apply each metasploit command. Be carefully and don't use if you don't know how or for bad purposes.
 
 -m, --msfconsole [EXPLOIT_CHECK] [PAYLOAD] [CMD] [LIST] execute msf command for each input in the list
 
@@ -272,3 +271,12 @@ Send data to elastic search and import our Dashboard in KIBANA
 # Acknowledgment
 
 PeterBank : My most sincere gratitude and recognition to Olger T., who has taught me about cybersecurity these months.
+
+
+## License and rights
+
+Just you can use for non proffit activities, never for commercial use, distribution part of the content for comercial purposes or make any kind of proffit are forbbiden,
+
+Talk with the authors for that, we have a really better version for commercial purposes.
+
+
