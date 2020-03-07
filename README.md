@@ -2,11 +2,11 @@
 
 Olger Nmap D3.js data visualizer with CVE check and ansible inventories smart generation.
 
-Local python webserver in localhost for graph visualization with D3.js .
+Local python webserver for graph visualization with D3.js .
 
 Uses www.cvdetails.com to identify Cyber Security Vulnerabilities .
 
-Sends data to elasticsearch and visualizes data in kibana .
+Sends data to elasticsearch and visualizes in kibana .
 
 Ansible inventory generation, group inventory per software type
 
@@ -14,7 +14,7 @@ Graphviz export, export pdf and .dot files
 
 Shodan api
 
-Generates HA proxy configs for big networks
+Generates HA proxy configs for protect big networks
 
 Metasploit integration
 
