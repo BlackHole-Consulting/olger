@@ -13,6 +13,8 @@ npm install npm
 npm install
 npm audit fix
 pip install -r requirements.txt
+sudo apt install sshpass
+
 mkdir ./reports
 mkdir ./data
 mkdir web/graphs
