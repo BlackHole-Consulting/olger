@@ -1,5 +1,23 @@
-- name: Install elasticsearch kibana and filebeat
-  shell: scripts/install_elk.sh >> elkinstall_log.txt
-  shell: scripts/setup_certs_elk.sh >> certs_log.txt
+- hosts: all
+  vars_prompt:
+
+    - name: password
+      prompt: "What is your sudo password?"
+
+  become: true 
+  #remote_user: "root"
+  vars:
+    - ansible_become_pass: "{{ password }}"      
+    - ansible_sudo_pass: '{{password}}' 
+  tasks: 
+    - script: install_elk.sh 
+    - script: setup_certs_elk.sh 
+      register: out
+
+    - debug:
+        verbosity: 2 
+        msg:
+        - "Debug: {{out}}"
+      
 #  args:
 #    chdir: somedir/
