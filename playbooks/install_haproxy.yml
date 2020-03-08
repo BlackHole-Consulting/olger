@@ -2,7 +2,7 @@
   vars_prompt:
 
     - name: password
-      prompt: "What is your password?"
+      prompt: "What is your sudo password?"
 
   vars: 
     - ansible_sudo_pass: '{{password}}' 
