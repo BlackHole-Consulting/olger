@@ -20,6 +20,7 @@ Generates HAPROXY configs for protect big networks
 
 Metasploit integration
 
+Ansible playbooks
 
 ## Why
 
