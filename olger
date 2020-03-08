@@ -100,12 +100,13 @@ while [ $# -gt 0 ] ; do
             echo "configuration file generated in data/haproxy.conf"
         ;;
     -a|--ansible)
-            
+            #execute ansible playbooks
             ansible-playbook -i data/$2 playbooks/$3
             
         ;;
     -l|--ansible-list)
-            
+            #list ansible playbooks
+
             ls -lsa $2
         ;;
     -*)
