@@ -1,4 +1,4 @@
-- name: Install HAPROXY
+- task: Install HAPROXY
   shell: scripts/install_haproxy.sh >> haproxy_log.txt
 #  args:
 #    chdir: somedir/
