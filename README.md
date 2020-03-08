@@ -77,6 +77,9 @@ Options:
 
 -q, --query [DIR] [QUERY] make querys over raw json or csv data (not ready)
 
+-a, --ansible [INVENTORY] [PLAYBOOK] Execture ansible playbooks
+
+-l, --ansible-list playbooks , List all available playbooks
 
 
 ```
