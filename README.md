@@ -277,7 +277,7 @@ This example search all dlink routers in the world and show his remote administr
 Please don't use for deploy botnets, hack corporations or goverments.
 
 
-## Cront Jobs
+## Cron Jobs
 
 Add any line to cronjobs file /etc/crontab for scheduled tasks 
 
