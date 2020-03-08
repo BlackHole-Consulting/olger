@@ -1,3 +1,5 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/589b7a8dd82b427ab31f6f15496a0f10)](https://www.codacy.com/manual/pedroelbanquero/olger?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pedroelbanquero/olger&amp;utm_campaign=Badge_Grade)
+
 ## What olger does
 
 Olger Nmap D3.js data visualizer with CVE check and ansible inventories smart generation.
