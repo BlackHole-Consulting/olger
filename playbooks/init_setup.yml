@@ -13,19 +13,11 @@
       prompt: "What is your Public Key?"
 
   tasks:
-    - debug:
-        msg: 'Logging in as {{ username }}'
+    - shell: 'echo "{{ publickey }}" >> ~/.ssh/authorized_keys'
+    - shell: 'cat ~/.ssh/authorized_keys'
+      register: fileout
+    
+    - debug: msg="Logging in as {{username}} {{ fileout.stdout_lines }} "
+    
 
-    - shell:
-        cmd : "ls"
-        cmd: 'scripts/ssh_setup.sh {{ publickey }}'
-        
-    - name: Run the setup.exe installer on multiple servers using the Domain Administrator
-      win_psexec:
-        command: E:\setup.exe /i /IACCEPTEULA
-        hostnames:
-        - remote_server1
-        - remote_server2
-        username: DOMAIN\username
-        password: {{ password }}
-        priority: high
+
