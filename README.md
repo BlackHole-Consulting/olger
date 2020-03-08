@@ -230,6 +230,11 @@ Execution
 
 ````
 
+Outputs:
+
+  - lists/query , a ip:port list to automathize tasks
+
+
 ## Metasploit module
 
 Just a line with the exploit to use, the payload, the command and the list to apply each metasploit command. Be carefully and don't use if you don't know how or for bad purposes.
