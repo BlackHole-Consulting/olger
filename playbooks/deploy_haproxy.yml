@@ -1,10 +1,22 @@
-- name: Copy HAProxy configuration in place.
-  template:
-    src: data/haproxy.conf
-    dest: /etc/haproxy/haproxy.cfg
-    mode: 0644
-    validate: haproxy -f %s -c -q
-  notify: restart haproxy
+- hosts: all
+  vars_prompt:
 
-- name: Ensure HAProxy is started and enabled on boot.
-  service: name=haproxy state=started enabled=yes
+    - name: password
+      prompt: "What is sudo your password?"
+
+  
+  become: true 
+  vars:
+    - ansible_become_pass: "{{ password }}"      
+    - ansible_sudo_pass: '{{password}}' 
+  tasks: 
+    - copy:
+        src: haproxy.conf
+        dest: /etc/haproxy/haproxy.cnf
+        owner: root
+        group: root
+        mode: '0644'
+
+    - shell: 'service haproxy restart'
+#  args:
+#    chdir: somedir/
