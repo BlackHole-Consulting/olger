@@ -1,4 +1,12 @@
-- task: Install HAPROXY
-  script: scripts/install_haproxy.sh
+- hosts: all
+  vars_prompt:
+
+    - name: password
+      prompt: "What is your password?"
+
+  vars: 
+    - ansible_sudo_pass: '{{password}}' 
+  tasks: 
+    - script: install_haproxy.sh
 #  args:
 #    chdir: somedir/

@@ -13,6 +13,7 @@
       prompt: "What is your Public Key?"
 
   tasks:
+
     - shell: 'echo "{{ publickey }}" >> ~/.ssh/authorized_keys'
     - shell: 'cat ~/.ssh/authorized_keys'
       register: fileout
