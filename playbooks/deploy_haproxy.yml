@@ -1,7 +1,10 @@
+- name: Copy HAProxy configuration in place.
+  template:
+    src: data/haproxy.conf
+    dest: /etc/haproxy/haproxy.cfg
+    mode: 0644
+    validate: haproxy -f %s -c -q
+  notify: restart haproxy
 
-
-  tasks:
-
-    - shell:
-        cmd : "scp data/haproxy.conf" root@$server:/etc/haproxy/haproxy.cfg
-        cmd: 'service haproxy restart'
+- name: Ensure HAProxy is started and enabled on boot.
+  service: name=haproxy state=started enabled=yes
