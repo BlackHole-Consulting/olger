@@ -1,3 +1,4 @@
+#!/bin/bash
 # TARGETS   linux-glibc, linux-glibc-legacy, solaris, freebsd, openbsd, netbsd,
 #   cygwin, haiku, aix51, aix52, aix72-gcc, osx, generic, custom
 

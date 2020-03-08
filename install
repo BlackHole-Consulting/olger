@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo apt-get install python-pip
 sudo apt install python-elasticsearch
 sudo apt-get install xdot

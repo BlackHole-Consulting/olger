@@ -1,3 +1,4 @@
+#!/bin/bash
 ES_HOME=/usr/share/elasticsearch
 ES_PATH_CONF=/etc/elasticsearch
 

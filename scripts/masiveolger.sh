@@ -1,4 +1,4 @@
-
+#!/bin/bash
 baseàth="/"
 for f in $basepath/data/$1/*; do
     if [ -d "$f" ]
