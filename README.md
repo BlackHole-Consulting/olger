@@ -30,7 +30,7 @@ The timing to repair or modify things is extremlly bureaucratized, and normally 
 
 ## Please don't use for bad things
 
-The information collected with this tool can be illegal in some countries, sometimes can expose big infrastructures to a dangerous consequences if you publish something, take care on that, this tool sends non malicious packets around the network to check connectivity and other cybersecurity issues.
+The information collected with this tool can be illegal in some countries, sometimes can expose big infrastructures to a dangerous consequences if you publish something, take care on that, this tool sends non malicious packets around the network to check connectivity and other cybersecurity issues. But can be used for bad things, please don't do that
 
 
 
