@@ -1,0 +1,30 @@
+{
+  "name": "olger",
+  "version": "1.0.0",
+  "description": "Olger Nmap D3.js data visualizer with CVE check and ansible playbook smart generation.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "npm": "^6.13.7",
+    "shodan": "^0.1.0",
+    "shodan-api": "^0.1.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedroelbanquero/olger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedroelbanquero/olger/issues"
+  },
+  "homepage": "https://github.com/pedroelbanquero/olger#readme"
+}

@@ -12,10 +12,9 @@ Ansible inventory generation, group inventory per software type
 
 Graphviz export, export pdf and .dot files
 
-Shodan api - Cooming soon
+Shodan api
 
-Metasploit integration - Cooming soon
-
+Metasploit integration
 
 
 ## Why
@@ -33,17 +32,37 @@ The information collected with this tool can be illegal in some countries, somet
 
 Execute command:
 ```bash
+git clone https://github.com/pedroelbanquero/olger.git
+
 cd olger
 
-chmod +x install
+
+chmod +x ./install
+
 
 ./install
 
 
 ```
 
+## Usage
 
-## How to plot a network graph
+
+```bash
+Usage: $PROGNAME [OPTION ...] [foo] [bar]
+Olger a Red Team tool with ansible playbooks to repair things , D3.js Graph visualization, metasploit and shodan
+Options:
+-h, --help          display this usage message and exit
+-n, --genfromnmap  [RANGE] [MISSION]     delete things
+-f, --genfromfile [FILE] generate a graph from nmap xml file
+-s, --genfromshodan [QUERY] write output to file
+-m, --msfconsole [EXPLOIT_CHECK] [PAYLOAD] [CMD] [LIST] execute msf command for each input in the list
+-r, --report [MISSION] write output to file in pdf and dot format
+-q, --query [DIR] [QUERY] make querys over raw json or csv data (not ready)
+
+```
+
+## How to plot a network graph with nmap
 
 Execute command:
 
@@ -51,9 +70,7 @@ Execute command:
 ```bash
 cd olger
 
-chmod +x olger.sh (Just first time)
-
-./scripts/olger.sh 192.168.0.1-255 name-mission
+./olger -n 192.168.0.1-255 name-mission
 
 ```
 
@@ -65,7 +82,10 @@ Outputs:
   - reports/reportNameMission.txt, a plaint text data report in txt format
   - web server in port 8000, serving D3.js interactive graph
   - elasticsearch with tls support push
-  
+ 
+ 
+ 
+ 
 ## How to dump a workless security report
 
 Execute command:
@@ -77,7 +97,7 @@ cd olger
 
 chmod +x ./scripts/genreport.sh (Just first time)
 
-./scripts/genreport.sh ./web/graphs/data.json name-mission
+./olger -r ./web/graphs/data.json name-mission
 
 
 ```

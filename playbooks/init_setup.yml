@@ -20,7 +20,12 @@
         cmd : "ls"
         cmd: 'scripts/ssh_setup.sh {{ privatekey }}'
         
-    - wincommand:
-        #add windows
-        stdin: 'dir'
-        
+    - name: Run the setup.exe installer on multiple servers using the Domain Administrator
+      win_psexec:
+        command: E:\setup.exe /i /IACCEPTEULA
+        hostnames:
+        - remote_server1
+        - remote_server2
+        username: DOMAIN\username
+        password: some_password
+        priority: high
