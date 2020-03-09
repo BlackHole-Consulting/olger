@@ -1,0 +1,8 @@
+- name: Testeo
+  hosts: win
+
+  tasks:
+    - win_shell: whoami
+      register: command_output
+    - name: debug output
+      debug: var=command_output

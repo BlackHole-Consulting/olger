@@ -36,7 +36,9 @@ git clone https://github.com/pedroelbanquero/olger.git
 
 cd olger
 
+
 chmod +x ./install
+
 
 ./install
 

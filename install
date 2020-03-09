@@ -5,12 +5,19 @@ sudo apt install nmap
 sudo apt install msfconsole
 sudo apt install python3-libnmap
 sudo apt install python3-dateutil
+
+sudo npm install shodan -g
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt update -y
+sudo apt install ansible -y
+
 sudo apt install python-xmltodict
 sudo apt install npm
 sudo npm install shodan -g
 npm install npm
 npm install
 npm audit fix
+
 pip install -r requirements.txt
 mkdir ./reports
 mkdir ./data
