@@ -42,9 +42,13 @@ The information collected with this tool can be illegal in some countries, somet
 Execute command:
 
 ```bash
+git clone https://github.com/pedroelbanquero/olger.git
+
 cd olger
 
+
 chmod +x ./install
+
 
 ./install
 

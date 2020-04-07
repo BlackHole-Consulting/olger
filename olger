@@ -56,7 +56,7 @@ while [ $# -gt 0 ] ; do
         ;;
     -n|--genfromnmap)
             #scan with nmap an save the results
-            nmap -sV -A $2 -oX data/nmap$3.xml
+            nmap -v -sV -A $2 -oX data/nmap$3.xml
 
             #convert the results to json
             python3 ./bin/converter.py data/nmap$3.xml data/nmap$3.xml.json
@@ -78,7 +78,7 @@ while [ $# -gt 0 ] ; do
     -r|--report)
         
             #convert graph to a pdf and dot files
-            node scripts/graphpdf.js $1 | dot -Tpdf > ~/reports/$2/report$2.pdf
+            node scripts/graphpdf.js $1 | dot -Tpdf > ./reports/$2/report$2.pdf
             node scripts/graphpdf.js $1 > ./data.dot && xdot ./reports/$2/data$2.dot  
 
         ;;

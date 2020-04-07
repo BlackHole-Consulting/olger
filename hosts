@@ -1,0 +1,12 @@
+#Archivo de inventario para Ansible
+#Attach windows servers with WinRM
+
+[win]
+192.168.1.47
+
+[win:vars]
+ansible_user="Administrator"
+ansible_password="Password"
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+

@@ -4,3 +4,6 @@ colored
 prettytable
 requests
 xmltodict
+python-nmap
+colored
+pywinrm
