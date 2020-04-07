@@ -1,6 +1,6 @@
 #!/bin/bash
-baseàth="/"
-for f in $basepath/data/$1/*; do
+basepath=`echo $PWD`
+for f in $basepath/playbooks/*; do
     if [ -d "$f" ]
     then
 	echo ""
@@ -17,12 +17,23 @@ for f in $basepath/data/$1/*; do
 						ext="${f2: -4}"
 						if [[ ".xml" == $ext ]]
 						then
-							python3 $basepath/bin/converter.py  "$f2" "$f2".json	
-              						python $basepath/bin/maptograph.py "$f2".json "$1"
+              						ansible-playbook-grapher "$f2" -o "playbooks/svg/$f2"	
 						fi
 					done
 			fi
 		done
+
+    else
+	
+	ext="${f: -4}"
+	if [[ ".xml" == $ext ]]
+	then
+		echo $f       
+		ansible-playbook-grapher "$f" -o "playbooks/svg/$f"	
+	fi
+
+
+
 
 	# $f is a directory
     fi

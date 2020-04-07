@@ -34,6 +34,11 @@ Options:
 
 -q, --query [DIR] [QUERY] make querys over raw json or csv data (not ready)
 
+-p, --hapgen [DATAFILE] Generate haproxy configuration
+
+-a, --ansible [INVENTORY] [PLAYBOOK] [OPTIONS] Execute ansible playbooks
+
+-al, --ansible-list Generate playbooks list
 
 EOF
 
@@ -61,7 +66,6 @@ while [ $# -gt 0 ] ; do
             cd web
             python3 -m http.server
         ;;
-
     -f|--genfromfile)
             #convert the results to json
             python3 ./bin/converter.py $2 data/nmap$3.xml.json
@@ -83,12 +87,27 @@ while [ $# -gt 0 ] ; do
             python3 scripts/olger_msfconsole.py $2 $3 $4 $5
 
         ;;
-
     -s|--genfromshodan)
 
             #generate shodan graph and files, you can use this files to launch masive security checks over infrastructures, the shodan list in csv format will be saved in lists forlder            
             node scripts/shodan.js $2
             echo "you can find the output in lists/$2 launch "
+        ;;
+    -p|--hapgen)
+            #generate ha proxy configuration, take a look scripts/gen_ha_proxy.py scripts for more details            
+            
+            python scripts/gen_ha_proxy.py $2
+            echo "configuration file generated in data/haproxy.conf"
+        ;;
+    -a|--ansible)
+            #execute ansible playbooks
+            ansible-playbook -i data/$2 playbooks/$3
+            
+        ;;
+    -l|--ansible-list)
+            #list ansible playbooks
+
+            ls -lsa $2
         ;;
     -*)
         usage "Unknown option '$1'"
@@ -110,11 +129,6 @@ if [ -z "$bar" ] ; then
     usage "Not enough arguments"
 fi
 
-cat <<EOF
-foo=$foo
-bar=$bar
-delete=$delete
-output=$output
-EOF
+
 
 

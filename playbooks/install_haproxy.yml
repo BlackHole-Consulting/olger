@@ -1,0 +1,12 @@
+- hosts: all
+  vars_prompt:
+
+    - name: password
+      prompt: "What is your sudo password?"
+
+  vars: 
+    - ansible_sudo_pass: '{{password}}' 
+  tasks: 
+    - script: install_haproxy.sh
+#  args:
+#    chdir: somedir/

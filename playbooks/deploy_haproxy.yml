@@ -1,0 +1,22 @@
+- hosts: all
+  vars_prompt:
+
+    - name: password
+      prompt: "What is sudo your password?"
+
+  
+  become: true 
+  vars:
+    - ansible_become_pass: "{{ password }}"      
+    - ansible_sudo_pass: '{{password}}' 
+  tasks: 
+    - copy:
+        src: haproxy.conf
+        dest: /etc/haproxy/haproxy.cnf
+        owner: root
+        group: root
+        mode: '0644'
+
+    - shell: 'service haproxy restart'
+#  args:
+#    chdir: somedir/
