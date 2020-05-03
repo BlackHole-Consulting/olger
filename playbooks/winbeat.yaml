@@ -1,0 +1,18 @@
+- name: winlogbeat
+  hosts: win
+
+  tasks:
+    - name: get a zip and decompress
+    - win_get_url:
+        url: https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-7.6.2-windows-x86_64.zip
+        dest: C:\Program Files
+    - win_unzip:
+        src: C:\Program Files\winlogbeat-7.6.2-windows-x86_64.zip
+        dest: C:\Program Files
+        delete_archive: yes
+    - name: run install script
+      script : C:\Program Files\winlogbeat-7.6.2-windows-x86_64\install-service-winlogbeat.ps1
+      args:
+        chdir: C:\Program Files\winlogbeat-7.6.2-windows-x86_64
+      register: install_out
+      debug: var=install_out

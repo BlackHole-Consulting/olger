@@ -7,3 +7,5 @@ xmltodict
 python-nmap
 colored
 pywinrm
+elasticsearch
+ansible
