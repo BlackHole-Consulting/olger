@@ -1,0 +1,13 @@
+-
+  hosts: all
+  tasks:
+    -
+      name: "Download wireguard client"
+      win_get_url:
+        dest: "C:\\Windows\\Temp\\wireguard-amd64-0.1.0.msi"
+        url: "https://download.wireguard.com/windows-client/wireguard-amd64-0.1.0.msi"
+    - 
+      name: Ensure wireguard is present
+      win_package:
+        path: "C:\\Windows\\Temp\\wireguard-amd64-0.1.0.msi"
+        state: present
