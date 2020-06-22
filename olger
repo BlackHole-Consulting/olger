@@ -61,7 +61,7 @@ while [ $# -gt 0 ] ; do
             #convert the results to json
             python3 ./bin/converter.py data/nmap$3.xml data/nmap$3.xml.json
             #process the data to a json d3 graph
-            python scripts/olger_lib.py data/nmap$3.xml.json > reports/report$3.txt
+            python scripts/olger_lib.py data/nmap$3.xml.json $3 > reports/report$3.txt
             #execute the web visualizer server
             cd web
             python3 -m http.server
@@ -70,7 +70,7 @@ while [ $# -gt 0 ] ; do
             #convert the results to json
             python3 ./bin/converter.py $2 data/nmap$3.xml.json
             #process the data to a json d3 graph
-            python scripts/olger_lib.py data/nmap$3.xml.json > reports/report$3.txt
+            python scripts/olger_lib.py data/nmap$3.xml.json $3 > reports/report$3.txt
             #execute the web visualizer server
             cd web
             python3 -m http.server
