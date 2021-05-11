@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "dependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "npm": "^6.13.7",
     "shodan": "^0.1.0",
     "shodan-api": "^0.1.6"
